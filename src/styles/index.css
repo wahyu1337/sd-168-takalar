@@ -1366,3 +1366,589 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ============================================
+   PAGE BANNER (Sub-pages)
+   ============================================ */
+.page-banner {
+    position: relative;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-dark);
+    overflow: hidden;
+}
+
+.page-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>');
+    background-size: 200px;
+    z-index: 1;
+}
+
+.page-banner__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--clr-white);
+    padding: var(--space-3xl) var(--space-xl);
+}
+
+.page-banner__breadcrumb {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: var(--space-md);
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+.page-banner__title {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-extrabold);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: var(--space-sm);
+    animation: fadeInUp 0.6s ease 0.1s forwards;
+    opacity: 0;
+}
+
+.page-banner__subtitle {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-light);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.25s forwards;
+}
+
+
+/* ============================================
+   PREVIEW SECTIONS (Home page)
+   ============================================ */
+.preview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.preview-content__image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.preview-cta {
+    text-align: center;
+    margin-top: var(--space-2xl);
+}
+
+.galeri__grid--preview {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn--link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: none;
+    border: none;
+    color: var(--clr-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    padding: var(--space-sm) 0;
+    cursor: pointer;
+    transition: color var(--transition-fast), gap var(--transition-fast);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.btn--link:hover {
+    color: var(--clr-accent-dark);
+    gap: var(--space-md);
+}
+
+.btn--full {
+    width: 100%;
+    justify-content: center;
+}
+
+
+/* ============================================
+   PROFIL DETAIL (Profil page)
+   ============================================ */
+.profil-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.profil-detail__card {
+    background: var(--clr-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--clr-gray-200);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.profil-detail__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.profil-detail__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.profil-detail__icon {
+    font-size: 40px;
+    margin-bottom: var(--space-md);
+}
+
+.profil-detail__card h3 {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary);
+    margin-bottom: var(--space-md);
+}
+
+.profil-detail__card p {
+    color: var(--clr-text-light);
+    line-height: 1.8;
+}
+
+.profil-detail__card ul {
+    padding-left: var(--space-md);
+}
+
+.profil-detail__card ul li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--clr-text-light);
+    line-height: 1.7;
+}
+
+.profil-detail__card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--clr-primary);
+    font-weight: var(--fw-bold);
+}
+
+/* Sejarah */
+.sejarah-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.sejarah-content__text p {
+    color: var(--clr-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+/* Identitas */
+.identitas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.identitas-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-gray-200);
+    transition: all var(--transition-fast);
+}
+
+.identitas-item:hover {
+    border-color: var(--clr-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.identitas-item__label {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-xs);
+}
+
+.identitas-item__value {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-medium);
+    color: var(--clr-text);
+}
+
+
+/* ============================================
+   KEPALA SEKOLAH CARD (Staff page)
+   ============================================ */
+.kepsek-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xl);
+    background: var(--gradient-dark);
+    color: var(--clr-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl) var(--space-3xl);
+    box-shadow: var(--shadow-lg);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.kepsek-card__avatar {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    border: 3px solid rgba(255, 215, 0, 0.4);
+}
+
+.kepsek-card__name {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-xs);
+}
+
+.kepsek-card__role {
+    font-size: var(--fs-sm);
+    opacity: 0.8;
+    margin-bottom: var(--space-md);
+}
+
+.kepsek-card__quote {
+    font-size: var(--fs-sm);
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.7;
+    border-left: 3px solid var(--clr-accent);
+    padding-left: var(--space-md);
+}
+
+
+/* ============================================
+   INFORMASI LIST (Informasi page)
+   ============================================ */
+.informasi-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.informasi-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background: var(--clr-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--clr-gray-200);
+    transition: all var(--transition-normal);
+}
+
+.informasi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.informasi-card__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    padding: var(--space-lg);
+    position: relative;
+}
+
+.informasi-card__icon {
+    font-size: 48px;
+    margin-bottom: var(--space-sm);
+}
+
+.informasi-card__category {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--clr-white);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-xl);
+    letter-spacing: 0.5px;
+}
+
+.informasi-card__body {
+    padding: var(--space-xl);
+}
+
+.informasi-card__meta {
+    margin-bottom: var(--space-sm);
+}
+
+.informasi-card__date {
+    font-size: var(--fs-xs);
+    color: var(--clr-gray-500);
+}
+
+.informasi-card__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text);
+    margin-bottom: var(--space-sm);
+    line-height: 1.4;
+}
+
+.informasi-card__text {
+    font-size: var(--fs-sm);
+    color: var(--clr-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+.informasi-card__footer {
+    border-top: 1px solid var(--clr-gray-200);
+    padding-top: var(--space-md);
+}
+
+
+/* ============================================
+   GALERI FULL PAGE (Galeri page)
+   ============================================ */
+.galeri-filter {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.galeri-filter__btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--clr-gray-600);
+    background: var(--clr-white);
+    border: 2px solid var(--clr-gray-200);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.galeri-filter__btn:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.galeri-filter__btn.active {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.galeri__grid--full {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.galeri__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 59, 18, 0.7);
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-lg);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    border-radius: var(--radius-lg);
+}
+
+.galeri__item:hover .galeri__overlay {
+    opacity: 1;
+}
+
+.galeri__caption {
+    color: var(--clr-white);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+}
+
+.galeri__item.hidden {
+    display: none;
+}
+
+
+/* ============================================
+   CONTACT FORM (Kontak page)
+   ============================================ */
+.kontak-form {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form__group {
+    margin-bottom: var(--space-lg);
+}
+
+.form__label {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--clr-text);
+    margin-bottom: var(--space-sm);
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+    padding: 14px var(--space-lg);
+    font-family: var(--font-main);
+    font-size: var(--fs-sm);
+    color: var(--clr-text);
+    background: var(--clr-white);
+    border: 2px solid var(--clr-gray-200);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    outline: none;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 4px rgba(27, 94, 32, 0.1);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: var(--clr-gray-400);
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* ============================================
+   RESPONSIVE — Page-specific (Tablet)
+   ============================================ */
+@media (max-width: 992px) {
+    .preview-content {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri__grid--preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profil-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .sejarah-content {
+        grid-template-columns: 1fr;
+    }
+
+    .identitas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .informasi-card {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri__grid--full {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kepsek-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kepsek-card__quote {
+        border-left: none;
+        border-top: 2px solid rgba(255, 215, 0, 0.3);
+        padding-left: 0;
+        padding-top: var(--space-md);
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — Page-specific (Mobile)
+   ============================================ */
+@media (max-width: 768px) {
+    .page-banner {
+        min-height: 180px;
+    }
+
+    .page-banner__title {
+        font-size: var(--fs-xl);
+    }
+
+    .page-banner__subtitle {
+        font-size: var(--fs-sm);
+    }
+
+    .galeri__grid--preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeri__grid--full {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kepsek-card {
+        padding: var(--space-xl);
+    }
+
+    .kepsek-card__avatar {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeri__grid--preview {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri__grid--full {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri-filter {
+        gap: var(--space-xs);
+    }
+
+    .galeri-filter__btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: var(--fs-xs);
+    }
+}

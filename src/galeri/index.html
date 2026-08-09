@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeri foto kegiatan dan dokumentasi SD Inpres 168 Romangtanngaya, Kabupaten Takalar.">
+    <title>Galeri — SD Inpres 168 Romangtanngaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <div class="header__logo-area">
+                <img src="/assets/logo-sd.png" alt="Logo SD Inpres 168" class="header__logo">
+                <div class="header__text">
+                    <h1 class="header__title">SD Inpres 168 Romangtanngaya</h1>
+                    <p class="header__subtitle">Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng Utara</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <button class="navbar__hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+            <ul class="navbar__menu" id="nav-menu">
+                <li><a href="/" class="navbar__link" data-page="home">Home</a></li>
+                <li><a href="/profil/" class="navbar__link" data-page="profil">Profil</a></li>
+                <li><a href="/staff/" class="navbar__link" data-page="staff">Staff &amp; Guru</a></li>
+                <li><a href="/informasi/" class="navbar__link" data-page="informasi">Informasi</a></li>
+                <li><a href="/galeri/" class="navbar__link" data-page="galeri">Galeri</a></li>
+                <li><a href="/kontak/" class="navbar__link" data-page="kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <img src="/assets/logo-sd.png" alt="Logo" class="sidebar__logo">
+            <span class="sidebar__brand">SD Inpres 168</span>
+            <button class="sidebar__close" id="sidebar-close" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="sidebar__menu">
+            <li><a href="/" class="sidebar__link" data-page="home">🏠 Home</a></li>
+            <li><a href="/profil/" class="sidebar__link" data-page="profil">📋 Profil</a></li>
+            <li><a href="/staff/" class="sidebar__link" data-page="staff">👨‍🏫 Staff &amp; Guru</a></li>
+            <li><a href="/informasi/" class="sidebar__link" data-page="informasi">📰 Informasi</a></li>
+            <li><a href="/galeri/" class="sidebar__link" data-page="galeri">🖼️ Galeri</a></li>
+            <li><a href="/kontak/" class="sidebar__link" data-page="kontak">📞 Kontak</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="page-banner__overlay"></div>
+            <div class="page-banner__content">
+                <span class="page-banner__breadcrumb">Home / Galeri</span>
+                <h2 class="page-banner__title">Galeri Foto</h2>
+                <p class="page-banner__subtitle">Dokumentasi kegiatan dan momen berharga di sekolah</p>
+            </div>
+        </section>
+
+        <!-- Galeri Filter -->
+        <section class="section" id="galeri-content">
+            <div class="section__inner">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__badge">Dokumentasi</span>
+                    <h2 class="section__title">Koleksi Foto</h2>
+                    <div class="section__divider"></div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="galeri-filter animate-on-scroll">
+                    <button class="galeri-filter__btn active" data-filter="all">Semua</button>
+                    <button class="galeri-filter__btn" data-filter="gedung">Gedung</button>
+                    <button class="galeri-filter__btn" data-filter="kegiatan">Kegiatan</button>
+                    <button class="galeri-filter__btn" data-filter="prestasi">Prestasi</button>
+                </div>
+
+                <!-- Galeri Grid -->
+                <div class="galeri__grid galeri__grid--full animate-on-scroll">
+                    <div class="galeri__item" data-category="gedung">
+                        <div class="galeri__placeholder">
+                            <span>🏫</span>
+                            <p>Gedung Sekolah</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Gedung Utama SD Inpres 168</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="kegiatan">
+                        <div class="galeri__placeholder">
+                            <span>📖</span>
+                            <p>Kegiatan Belajar</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Proses Belajar Mengajar</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="kegiatan">
+                        <div class="galeri__placeholder">
+                            <span>🏃</span>
+                            <p>Olahraga</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Kegiatan Olahraga</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="kegiatan">
+                        <div class="galeri__placeholder">
+                            <span>🎭</span>
+                            <p>Kegiatan Seni</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Kegiatan Seni dan Budaya</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="prestasi">
+                        <div class="galeri__placeholder">
+                            <span>🏆</span>
+                            <p>Prestasi</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Prestasi Siswa</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="kegiatan">
+                        <div class="galeri__placeholder">
+                            <span>🎉</span>
+                            <p>Upacara</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Upacara Bendera</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="gedung">
+                        <div class="galeri__placeholder">
+                            <span>🏢</span>
+                            <p>Ruang Kelas</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Ruang Kelas</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="gedung">
+                        <div class="galeri__placeholder">
+                            <span>📚</span>
+                            <p>Perpustakaan</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Perpustakaan Sekolah</p>
+                        </div>
+                    </div>
+                    <div class="galeri__item" data-category="prestasi">
+                        <div class="galeri__placeholder">
+                            <span>🥇</span>
+                            <p>Lomba</p>
+                        </div>
+                        <div class="galeri__overlay">
+                            <p class="galeri__caption">Perlombaan Tingkat Kecamatan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="/assets/logo-sd.png" alt="Logo" class="footer__logo">
+                    <div>
+                        <h3 class="footer__title">SD Inpres 168 Romangtanngaya</h3>
+                        <p class="footer__address">Kel. Mattompodalle, Kec. Polongbangkeng Utara<br>Kabupaten Takalar, Sulawesi Selatan</p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/profil/">Profil</a></li>
+                        <li><a href="/staff/">Staff & Guru</a></li>
+                        <li><a href="/informasi/">Informasi</a></li>
+                        <li><a href="/galeri/">Galeri</a></li>
+                        <li><a href="/kontak/">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Kontak</h4>
+                    <p>📞 (0418) XXXXXXX</p>
+                    <p>✉️ sd168romangtanngaya@gmail.com</p>
+                    <p>🕐 Senin - Sabtu: 07.00 - 13.00</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 SD Inpres 168 Romangtanngaya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

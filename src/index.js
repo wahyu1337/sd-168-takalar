@@ -1,6 +1,7 @@
 /**
  * SD Inpres 168 Romangtanngaya — Main JavaScript
- * Handles: Sidebar toggle, scroll animations, nav highlighting, back-to-top
+ * Multi-page: sidebar toggle, URL-based nav highlighting,
+ * scroll animations, back-to-top, galeri filter, counter animation
  */
 
 import './styles/index.css';
@@ -14,11 +15,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.navbar__link');
     const sidebarLinks = document.querySelectorAll('.sidebar__link');
     const backToTop = document.getElementById('back-to-top');
-    const header = document.getElementById('header');
     const navbar = document.getElementById('navbar');
-    const sections = document.querySelectorAll('.section, .hero, .stats');
     const animateElements = document.querySelectorAll('.animate-on-scroll');
     const statNumbers = document.querySelectorAll('.stats__number');
+
+
+    // === URL-Based Active Nav Highlighting ===
+    function setActiveNavByURL() {
+        const path = window.location.pathname;
+
+        // Determine current page from URL
+        let currentPage = 'home';
+        if (path.includes('/profil')) currentPage = 'profil';
+        else if (path.includes('/staff')) currentPage = 'staff';
+        else if (path.includes('/informasi')) currentPage = 'informasi';
+        else if (path.includes('/galeri')) currentPage = 'galeri';
+        else if (path.includes('/kontak')) currentPage = 'kontak';
+
+        // Highlight navbar links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-page') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        // Highlight sidebar links
+        sidebarLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-page') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    setActiveNavByURL();
 
 
     // === Sidebar Toggle (Mobile) ===
@@ -38,83 +69,45 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    hamburgerBtn.addEventListener('click', () => {
-        if (sidebar.classList.contains('active')) {
-            closeSidebar();
-        } else {
-            openSidebar();
-        }
-    });
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            if (sidebar.classList.contains('active')) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+    }
 
-    sidebarClose.addEventListener('click', closeSidebar);
-    sidebarOverlay.addEventListener('click', closeSidebar);
+    if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
 
-    // Close sidebar on link click
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', closeSidebar);
-    });
-
-    // Close sidebar on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeSidebar();
     });
 
 
-    // === Sticky Header Logic ===
-    let lastScroll = 0;
+    // === Sticky Navbar ===
+    function handleScroll() {
+        const scrollY = window.scrollY;
 
-    function handleHeaderScroll() {
-        const currentScroll = window.scrollY;
-        const headerHeight = header.offsetHeight;
-
-        if (currentScroll > headerHeight) {
-            // Past header — stick navbar at top
-            navbar.style.top = '0';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            // At top — navbar below header
-            navbar.style.top = '';
-            navbar.style.boxShadow = '';
+        // Navbar shadow on scroll
+        if (navbar) {
+            if (scrollY > 100) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = '';
+            }
         }
 
         // Back to top button
-        if (currentScroll > 400) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-
-        lastScroll = currentScroll;
-    }
-
-
-    // === Active Nav Highlighting ===
-    function updateActiveNav() {
-        const scrollPos = window.scrollY + 200;
-
-        sections.forEach(section => {
-            const sectionId = section.getAttribute('id');
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                // Update navbar links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-nav') === sectionId) {
-                        link.classList.add('active');
-                    }
-                });
-
-                // Update sidebar links
-                sidebarLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-nav') === sectionId) {
-                        link.classList.add('active');
-                    }
-                });
+        if (backToTop) {
+            if (scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
             }
-        });
+        }
     }
 
 
@@ -137,11 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     animateElements.forEach(el => scrollObserver.observe(el));
 
 
-    // === Animated Counter ===
+    // === Animated Counter (Home page stats) ===
     let countersAnimated = false;
 
     function animateCounters() {
-        if (countersAnimated) return;
+        if (countersAnimated || statNumbers.length === 0) return;
 
         const statsSection = document.getElementById('stats');
         if (!statsSection) return;
@@ -158,8 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 function updateCounter(currentTime) {
                     const elapsed = currentTime - startTime;
                     const progress = Math.min(elapsed / duration, 1);
-
-                    // Ease out quad
                     const easedProgress = 1 - (1 - progress) * (1 - progress);
                     const current = Math.floor(easedProgress * target);
 
@@ -179,9 +170,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // === Back to Top ===
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+
+    // === Galeri Filter (Galeri page) ===
+    const filterBtns = document.querySelectorAll('.galeri-filter__btn');
+    const galeriItems = document.querySelectorAll('.galeri__item[data-category]');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter items
+                galeriItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
 
 
     // === Scroll Event (throttled) ===
@@ -190,8 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (!ticking) {
             requestAnimationFrame(() => {
-                handleHeaderScroll();
-                updateActiveNav();
+                handleScroll();
                 animateCounters();
                 ticking = false;
             });
@@ -199,24 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-    // === Smooth Scroll for Nav Links ===
-    const allNavLinks = [...navLinks, ...sidebarLinks];
-    allNavLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-                const targetEl = document.querySelector(href);
-                if (targetEl) {
-                    targetEl.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    });
-
-
-    // === Initial calls ===
-    handleHeaderScroll();
-    updateActiveNav();
+    // Initial call
+    handleScroll();
 });

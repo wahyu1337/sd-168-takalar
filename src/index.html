@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website resmi SD Inpres 168 Romangtanngaya, Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng Utara. Informasi profil sekolah, staff & guru, galeri, dan kontak.">
-    <meta name="keywords" content="SD Inpres 168, Romangtanngaya, Takalar, Sekolah Dasar, Mattompodalle, Polongbangkeng Utara">
-    <title>SD Inpres 168 Romangtanngaya — Kabupaten Takalar</title>
-
-    <!-- Google Fonts -->
+    <meta name="description" content="Website resmi SD Inpres 168 Romangtanngaya, Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng Utara.">
+    <meta name="keywords" content="SD Inpres 168, Romangtanngaya, Takalar, Sekolah Dasar, Mattompodalle">
+    <title>SD Inpres 168 Romangtanngaya — Beranda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ========== HEADER ========== -->
+    <!-- HEADER -->
     <header class="header" id="header">
         <div class="header__inner">
             <div class="header__logo-area">
-                <img src="./assets/logo-sd.png" alt="Logo SD Inpres 168" class="header__logo" id="header-logo">
+                <img src="/assets/logo-sd.png" alt="Logo SD Inpres 168" class="header__logo" id="header-logo">
                 <div class="header__text">
                     <h1 class="header__title">SD Inpres 168 Romangtanngaya</h1>
                     <p class="header__subtitle">Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng Utara</p>
@@ -27,66 +25,63 @@
         </div>
     </header>
 
-    <!-- ========== NAVBAR ========== -->
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="navbar__inner">
-            <!-- Hamburger (mobile) -->
             <button class="navbar__hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
                 <span class="navbar__hamburger-line"></span>
                 <span class="navbar__hamburger-line"></span>
                 <span class="navbar__hamburger-line"></span>
             </button>
-
-            <!-- Nav links -->
             <ul class="navbar__menu" id="nav-menu">
-                <li><a href="#home" class="navbar__link active" data-nav="home">Home</a></li>
-                <li><a href="#profil" class="navbar__link" data-nav="profil">Profil</a></li>
-                <li><a href="#staff" class="navbar__link" data-nav="staff">Staff &amp; Guru</a></li>
-                <li><a href="#informasi" class="navbar__link" data-nav="informasi">Informasi</a></li>
-                <li><a href="#galeri" class="navbar__link" data-nav="galeri">Galeri</a></li>
-                <li><a href="#kontak" class="navbar__link" data-nav="kontak">Kontak</a></li>
+                <li><a href="/" class="navbar__link" data-page="home">Home</a></li>
+                <li><a href="/profil/" class="navbar__link" data-page="profil">Profil</a></li>
+                <li><a href="/staff/" class="navbar__link" data-page="staff">Staff &amp; Guru</a></li>
+                <li><a href="/informasi/" class="navbar__link" data-page="informasi">Informasi</a></li>
+                <li><a href="/galeri/" class="navbar__link" data-page="galeri">Galeri</a></li>
+                <li><a href="/kontak/" class="navbar__link" data-page="kontak">Kontak</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Sidebar Overlay (mobile) -->
+    <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-    <!-- ========== SIDEBAR (mobile) ========== -->
+    <!-- SIDEBAR (mobile) -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-            <img src="./assets/logo-sd.png" alt="Logo" class="sidebar__logo">
+            <img src="/assets/logo-sd.png" alt="Logo" class="sidebar__logo">
             <span class="sidebar__brand">SD Inpres 168</span>
             <button class="sidebar__close" id="sidebar-close" aria-label="Close menu">&times;</button>
         </div>
         <ul class="sidebar__menu">
-            <li><a href="#home" class="sidebar__link active" data-nav="home">🏠 Home</a></li>
-            <li><a href="#profil" class="sidebar__link" data-nav="profil">📋 Profil</a></li>
-            <li><a href="#staff" class="sidebar__link" data-nav="staff">👨‍🏫 Staff &amp; Guru</a></li>
-            <li><a href="#informasi" class="sidebar__link" data-nav="informasi">📰 Informasi</a></li>
-            <li><a href="#galeri" class="sidebar__link" data-nav="galeri">🖼️ Galeri</a></li>
-            <li><a href="#kontak" class="sidebar__link" data-nav="kontak">📞 Kontak</a></li>
+            <li><a href="/" class="sidebar__link" data-page="home">🏠 Home</a></li>
+            <li><a href="/profil/" class="sidebar__link" data-page="profil">📋 Profil</a></li>
+            <li><a href="/staff/" class="sidebar__link" data-page="staff">👨‍🏫 Staff &amp; Guru</a></li>
+            <li><a href="/informasi/" class="sidebar__link" data-page="informasi">📰 Informasi</a></li>
+            <li><a href="/galeri/" class="sidebar__link" data-page="galeri">🖼️ Galeri</a></li>
+            <li><a href="/kontak/" class="sidebar__link" data-page="kontak">📞 Kontak</a></li>
         </ul>
     </aside>
 
-    <!-- ========== MAIN CONTENT ========== -->
+    <!-- MAIN CONTENT -->
     <main class="main">
 
-        <!-- HERO Section -->
-        <section class="hero" id="home">
+        <!-- HERO -->
+        <section class="hero" id="hero">
             <div class="hero__overlay"></div>
             <div class="hero__content">
                 <span class="hero__badge">Selamat Datang di</span>
                 <h2 class="hero__title">SD Inpres 168<br>Romangtanngaya</h2>
                 <p class="hero__description">Mendidik generasi penerus bangsa dengan karakter, ilmu pengetahuan, dan akhlak mulia di Kabupaten Takalar.</p>
                 <div class="hero__buttons">
-                    <a href="#profil" class="btn btn--primary">Lihat Profil</a>
-                    <a href="#kontak" class="btn btn--outline">Hubungi Kami</a>
+                    <a href="/profil/" class="btn btn--primary">Lihat Profil</a>
+                    <a href="/kontak/" class="btn btn--outline">Hubungi Kami</a>
                 </div>
             </div>
         </section>
 
-        <!-- STATS Section -->
+        <!-- STATS -->
         <section class="stats" id="stats">
             <div class="stats__inner">
                 <div class="stats__item animate-on-scroll">
@@ -108,100 +103,32 @@
             </div>
         </section>
 
-        <!-- PROFIL Section -->
-        <section class="section profil" id="profil">
+        <!-- PREVIEW: Profil -->
+        <section class="section preview-section" id="preview-profil">
             <div class="section__inner">
                 <div class="section__header animate-on-scroll">
                     <span class="section__badge">Tentang Kami</span>
                     <h2 class="section__title">Profil Sekolah</h2>
                     <div class="section__divider"></div>
                 </div>
-                <div class="profil__content animate-on-scroll">
-                    <div class="profil__image-wrapper">
+                <div class="preview-content animate-on-scroll">
+                    <div class="preview-content__image">
                         <div class="profil__image-placeholder">
                             <span>📸</span>
                             <p>Foto Sekolah</p>
                         </div>
                     </div>
-                    <div class="profil__text">
+                    <div class="preview-content__text">
                         <h3 class="profil__heading">Visi</h3>
                         <p class="profil__paragraph">Terwujudnya peserta didik yang berkarakter, cerdas, terampil, dan berakhlak mulia berdasarkan iman dan taqwa.</p>
-                        
-                        <h3 class="profil__heading">Misi</h3>
-                        <ul class="profil__list">
-                            <li>Melaksanakan pembelajaran yang aktif, kreatif, efektif, dan menyenangkan (PAKEM)</li>
-                            <li>Menumbuhkan semangat keunggulan secara intensif kepada seluruh warga sekolah</li>
-                            <li>Mendorong dan membantu setiap siswa untuk mengenali potensi dirinya</li>
-                            <li>Menerapkan manajemen partisipatif dengan melibatkan seluruh warga sekolah</li>
-                        </ul>
+                        <a href="/profil/" class="btn btn--link">Selengkapnya →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- STAFF & GURU Section -->
-        <section class="section staff" id="staff">
-            <div class="section__inner">
-                <div class="section__header animate-on-scroll">
-                    <span class="section__badge">Tim Kami</span>
-                    <h2 class="section__title">Staff &amp; Guru</h2>
-                    <div class="section__divider"></div>
-                </div>
-                <div class="staff__grid animate-on-scroll">
-                    <!-- Staff Card 1 -->
-                    <div class="staff__card">
-                        <div class="staff__avatar">
-                            <span>👩‍🏫</span>
-                        </div>
-                        <h4 class="staff__name">Kepala Sekolah</h4>
-                        <p class="staff__role">Kepala Sekolah</p>
-                    </div>
-                    <!-- Staff Card 2 -->
-                    <div class="staff__card">
-                        <div class="staff__avatar">
-                            <span>👨‍🏫</span>
-                        </div>
-                        <h4 class="staff__name">Guru Kelas 1</h4>
-                        <p class="staff__role">Wali Kelas I</p>
-                    </div>
-                    <!-- Staff Card 3 -->
-                    <div class="staff__card">
-                        <div class="staff__avatar">
-                            <span>👩‍🏫</span>
-                        </div>
-                        <h4 class="staff__name">Guru Kelas 2</h4>
-                        <p class="staff__role">Wali Kelas II</p>
-                    </div>
-                    <!-- Staff Card 4 -->
-                    <div class="staff__card">
-                        <div class="staff__avatar">
-                            <span>👨‍🏫</span>
-                        </div>
-                        <h4 class="staff__name">Guru Kelas 3</h4>
-                        <p class="staff__role">Wali Kelas III</p>
-                    </div>
-                    <!-- Staff Card 5 -->
-                    <div class="staff__card">
-                        <div class="staff__avatar">
-                            <span>👩‍🏫</span>
-                        </div>
-                        <h4 class="staff__name">Guru Kelas 4</h4>
-                        <p class="staff__role">Wali Kelas IV</p>
-                    </div>
-                    <!-- Staff Card 6 -->
-                    <div class="staff__card">
-                        <div class="staff__avatar">
-                            <span>👨‍🏫</span>
-                        </div>
-                        <h4 class="staff__name">Guru Kelas 5</h4>
-                        <p class="staff__role">Wali Kelas V</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INFORMASI Section -->
-        <section class="section informasi" id="informasi">
+        <!-- PREVIEW: Informasi -->
+        <section class="section preview-section" id="preview-informasi">
             <div class="section__inner">
                 <div class="section__header animate-on-scroll">
                     <span class="section__badge">Terbaru</span>
@@ -209,7 +136,6 @@
                     <div class="section__divider"></div>
                 </div>
                 <div class="informasi__grid animate-on-scroll">
-                    <!-- Info Card 1 -->
                     <article class="info-card">
                         <div class="info-card__image">
                             <span class="info-card__icon">📅</span>
@@ -217,11 +143,9 @@
                         <div class="info-card__body">
                             <span class="info-card__date">Agustus 2026</span>
                             <h4 class="info-card__title">Penerimaan Siswa Baru</h4>
-                            <p class="info-card__text">Pendaftaran siswa baru tahun ajaran 2026/2027 telah dibuka. Segera daftarkan putra-putri Anda.</p>
-                            <a href="#" class="info-card__link">Selengkapnya →</a>
+                            <p class="info-card__text">Pendaftaran siswa baru tahun ajaran 2026/2027 telah dibuka.</p>
                         </div>
                     </article>
-                    <!-- Info Card 2 -->
                     <article class="info-card">
                         <div class="info-card__image">
                             <span class="info-card__icon">🏆</span>
@@ -229,11 +153,9 @@
                         <div class="info-card__body">
                             <span class="info-card__date">Juli 2026</span>
                             <h4 class="info-card__title">Prestasi Siswa</h4>
-                            <p class="info-card__text">Siswa-siswi kami meraih berbagai prestasi di tingkat kecamatan dan kabupaten.</p>
-                            <a href="#" class="info-card__link">Selengkapnya →</a>
+                            <p class="info-card__text">Siswa-siswi kami meraih berbagai prestasi di tingkat kecamatan.</p>
                         </div>
                     </article>
-                    <!-- Info Card 3 -->
                     <article class="info-card">
                         <div class="info-card__image">
                             <span class="info-card__icon">📚</span>
@@ -241,121 +163,52 @@
                         <div class="info-card__body">
                             <span class="info-card__date">Juni 2026</span>
                             <h4 class="info-card__title">Kegiatan Belajar Mengajar</h4>
-                            <p class="info-card__text">Informasi terkait jadwal dan kegiatan belajar mengajar semester genap.</p>
-                            <a href="#" class="info-card__link">Selengkapnya →</a>
+                            <p class="info-card__text">Informasi terkait jadwal dan kegiatan belajar mengajar.</p>
                         </div>
                     </article>
+                </div>
+                <div class="preview-cta animate-on-scroll">
+                    <a href="/informasi/" class="btn btn--primary">Lihat Semua Informasi</a>
                 </div>
             </div>
         </section>
 
-        <!-- GALERI Section -->
-        <section class="section galeri" id="galeri">
+        <!-- PREVIEW: Galeri -->
+        <section class="section preview-section" id="preview-galeri">
             <div class="section__inner">
                 <div class="section__header animate-on-scroll">
                     <span class="section__badge">Dokumentasi</span>
                     <h2 class="section__title">Galeri Foto</h2>
                     <div class="section__divider"></div>
                 </div>
-                <div class="galeri__grid animate-on-scroll">
+                <div class="galeri__grid galeri__grid--preview animate-on-scroll">
                     <div class="galeri__item">
-                        <div class="galeri__placeholder">
-                            <span>🏫</span>
-                            <p>Gedung Sekolah</p>
-                        </div>
+                        <div class="galeri__placeholder"><span>🏫</span><p>Gedung Sekolah</p></div>
                     </div>
                     <div class="galeri__item">
-                        <div class="galeri__placeholder">
-                            <span>📖</span>
-                            <p>Kegiatan Belajar</p>
-                        </div>
+                        <div class="galeri__placeholder"><span>📖</span><p>Kegiatan Belajar</p></div>
                     </div>
                     <div class="galeri__item">
-                        <div class="galeri__placeholder">
-                            <span>🏃</span>
-                            <p>Olahraga</p>
-                        </div>
+                        <div class="galeri__placeholder"><span>🏃</span><p>Olahraga</p></div>
                     </div>
                     <div class="galeri__item">
-                        <div class="galeri__placeholder">
-                            <span>🎭</span>
-                            <p>Kegiatan Seni</p>
-                        </div>
-                    </div>
-                    <div class="galeri__item">
-                        <div class="galeri__placeholder">
-                            <span>🏆</span>
-                            <p>Prestasi</p>
-                        </div>
-                    </div>
-                    <div class="galeri__item">
-                        <div class="galeri__placeholder">
-                            <span>🎉</span>
-                            <p>Upacara</p>
-                        </div>
+                        <div class="galeri__placeholder"><span>🎭</span><p>Kegiatan Seni</p></div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- KONTAK Section -->
-        <section class="section kontak" id="kontak">
-            <div class="section__inner">
-                <div class="section__header animate-on-scroll">
-                    <span class="section__badge">Hubungi Kami</span>
-                    <h2 class="section__title">Kontak</h2>
-                    <div class="section__divider"></div>
-                </div>
-                <div class="kontak__content animate-on-scroll">
-                    <div class="kontak__info">
-                        <div class="kontak__item">
-                            <div class="kontak__icon">📍</div>
-                            <div>
-                                <h4>Alamat</h4>
-                                <p>Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Sulawesi Selatan</p>
-                            </div>
-                        </div>
-                        <div class="kontak__item">
-                            <div class="kontak__icon">📞</div>
-                            <div>
-                                <h4>Telepon</h4>
-                                <p>(0418) XXXXXXX</p>
-                            </div>
-                        </div>
-                        <div class="kontak__item">
-                            <div class="kontak__icon">✉️</div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>sd168romangtanngaya@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="kontak__item">
-                            <div class="kontak__icon">🕐</div>
-                            <div>
-                                <h4>Jam Operasional</h4>
-                                <p>Senin - Sabtu: 07.00 - 13.00 WITA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kontak__map">
-                        <div class="kontak__map-placeholder">
-                            <span>🗺️</span>
-                            <p>Peta Lokasi</p>
-                            <small>Google Maps akan ditambahkan</small>
-                        </div>
-                    </div>
+                <div class="preview-cta animate-on-scroll">
+                    <a href="/galeri/" class="btn btn--primary">Lihat Semua Galeri</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ========== FOOTER ========== -->
+    <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="footer__inner">
             <div class="footer__top">
                 <div class="footer__brand">
-                    <img src="./assets/logo-sd.png" alt="Logo" class="footer__logo">
+                    <img src="/assets/logo-sd.png" alt="Logo" class="footer__logo">
                     <div>
                         <h3 class="footer__title">SD Inpres 168 Romangtanngaya</h3>
                         <p class="footer__address">Kel. Mattompodalle, Kec. Polongbangkeng Utara<br>Kabupaten Takalar, Sulawesi Selatan</p>
@@ -364,12 +217,12 @@
                 <div class="footer__links">
                     <h4>Menu</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#profil">Profil</a></li>
-                        <li><a href="#staff">Staff & Guru</a></li>
-                        <li><a href="#informasi">Informasi</a></li>
-                        <li><a href="#galeri">Galeri</a></li>
-                        <li><a href="#kontak">Kontak</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/profil/">Profil</a></li>
+                        <li><a href="/staff/">Staff & Guru</a></li>
+                        <li><a href="/informasi/">Informasi</a></li>
+                        <li><a href="/galeri/">Galeri</a></li>
+                        <li><a href="/kontak/">Kontak</a></li>
                     </ul>
                 </div>
                 <div class="footer__contact">
@@ -385,7 +238,6 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
 </body>

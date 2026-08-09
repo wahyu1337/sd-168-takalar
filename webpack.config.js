@@ -8,6 +8,7 @@ module.exports = {
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -26,9 +27,35 @@ module.exports = {
         ],
     },
     plugins: [
+        // Home
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+        }),
+        // Profil
+        new HtmlWebpackPlugin({
+            template: './src/profil/index.html',
+            filename: 'profil/index.html',
+        }),
+        // Staff & Guru
+        new HtmlWebpackPlugin({
+            template: './src/staff/index.html',
+            filename: 'staff/index.html',
+        }),
+        // Informasi
+        new HtmlWebpackPlugin({
+            template: './src/informasi/index.html',
+            filename: 'informasi/index.html',
+        }),
+        // Galeri
+        new HtmlWebpackPlugin({
+            template: './src/galeri/index.html',
+            filename: 'galeri/index.html',
+        }),
+        // Kontak
+        new HtmlWebpackPlugin({
+            template: './src/kontak/index.html',
+            filename: 'kontak/index.html',
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -48,5 +75,6 @@ module.exports = {
         open: true,
         hot: true,
         watchFiles: ['src/**/*'],
+        historyApiFallback: false,
     },
 };
