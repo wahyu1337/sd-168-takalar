@@ -515,7 +515,7 @@ button {
     max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
 }
 
@@ -1431,6 +1431,17 @@ button {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
+}
+
+.preview-content--center {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.preview-content--center .btn--link {
+    justify-content: center;
 }
 
 .preview-content__image {

@@ -42,11 +42,7 @@ module.exports = {
             template: './src/staff/index.html',
             filename: 'staff/index.html',
         }),
-        // Informasi
-        new HtmlWebpackPlugin({
-            template: './src/informasi/index.html',
-            filename: 'informasi/index.html',
-        }),
+
         // Galeri
         new HtmlWebpackPlugin({
             template: './src/galeri/index.html',
