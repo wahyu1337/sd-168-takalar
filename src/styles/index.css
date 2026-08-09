@@ -980,7 +980,7 @@ button {
 .footer {
     background: var(--gradient-dark);
     color: var(--clr-white);
-    padding: var(--space-3xl) var(--space-xl) 0;
+    padding: var(--space-lg) var(--space-xl) 0;
 }
 
 .footer__inner {
@@ -991,52 +991,52 @@ button {
 .footer__top {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: var(--space-3xl);
-    padding-bottom: var(--space-2xl);
+    gap: var(--space-lg);
+    padding-bottom: var(--space-md);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer__brand {
     display: flex;
     align-items: flex-start;
-    gap: var(--space-lg);
+    gap: var(--space-sm);
 }
 
 .footer__logo {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .footer__title {
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
-    margin-bottom: var(--space-sm);
+    margin-bottom: 2px;
 }
 
 .footer__address {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
     opacity: 0.7;
-    line-height: 1.7;
+    line-height: 1.4;
 }
 
 .footer__links h4,
 .footer__contact h4 {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
     font-weight: var(--fw-semibold);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xs);
     color: var(--clr-accent);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .footer__links ul li {
-    margin-bottom: var(--space-sm);
+    margin-bottom: 2px;
 }
 
 .footer__links a {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
     opacity: 0.7;
     transition: opacity var(--transition-fast), padding-left var(--transition-fast);
 }
@@ -1047,19 +1047,19 @@ button {
 }
 
 .footer__contact p {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
     opacity: 0.7;
-    margin-bottom: var(--space-sm);
-    line-height: 1.6;
+    margin-bottom: 2px;
+    line-height: 1.4;
 }
 
 .footer__bottom {
-    padding: var(--space-lg) 0;
+    padding: var(--space-sm) 0;
     text-align: center;
 }
 
 .footer__bottom p {
-    font-size: var(--fs-xs);
+    font-size: 10px;
     opacity: 0.5;
     letter-spacing: 0.5px;
 }
