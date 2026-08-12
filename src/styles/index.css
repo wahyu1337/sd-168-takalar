@@ -1140,9 +1140,9 @@ button {
 
 
 /* ============================================
-   RESPONSIVE — Tablet (< 992px)
+   RESPONSIVE — Tablet (< 1000px)
    ============================================ */
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
     :root {
         --fs-4xl: 2.5rem;
         --fs-3xl: 2rem;
@@ -1182,37 +1182,22 @@ button {
         align-items: center;
     }
 
-    body {
-        padding-left: 70px;
+    /* Hamburger in Header */
+    .header__inner {
+        justify-content: flex-start;
+        gap: var(--space-md);
     }
 
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 70px;
-        height: 100vh;
-        border-right: 1px solid rgba(0,0,0,0.1);
-        display: flex;
-        flex-direction: column;
-        padding-top: var(--space-md);
-        box-shadow: 2px 0 10px rgba(0,0,0,0.05);
-    }
-
-    /* Navbar → hamburger mode */
     .navbar__hamburger {
         display: flex;
-        margin: 0 auto;
+    }
+    
+    .navbar__hamburger-line {
+        background-color: var(--clr-white); /* Hamburger is now in the red header */
     }
 
-    .navbar__inner {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 0;
-        width: 100%;
-    }
-
-    .navbar__menu {
+    /* Hide the navbar bar entirely since menu is hidden and hamburger moved */
+    .navbar {
         display: none;
     }
 }
