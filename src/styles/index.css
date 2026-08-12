@@ -142,6 +142,47 @@ button {
     color: var(--clr-white);
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ============================================
+   PRELOADER
+   ============================================ */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-white);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader__spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(139, 26, 26, 0.2);
+    border-top-color: var(--clr-primary);
+    border-radius: 50%;
+    animation: preloader-spin 1s linear infinite;
+}
+
+@keyframes preloader-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* ============================================
    HEADER

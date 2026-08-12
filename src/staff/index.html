@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,45 @@
     <title>Staff & Guru — SD Inpres 168 Romangtanngaya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .preloader--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .preloader__spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(139, 26, 26, 0.2);
+            border-top-color: #8b1a1a;
+            border-radius: 50%;
+            animation: preloader-spin 1s linear infinite;
+        }
+        @keyframes preloader-spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
+
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__spinner"></div>
+    </div>
 
     <!-- HEADER -->
     <header class="header" id="header">
@@ -23,7 +60,8 @@
                 <img src="/assets/logo-sd.png" alt="Logo SD Inpres 168" class="header__logo">
                 <div class="header__text">
                     <h1 class="header__title">SD Inpres 168 Romangtanngaya</h1>
-                    <p class="header__subtitle">Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng Utara</p>
+                    <p class="header__subtitle">Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng
+                        Utara</p>
                 </div>
             </div>
         </div>
@@ -86,7 +124,8 @@
                     <div class="kepsek-card__info">
                         <h3 class="kepsek-card__name">Kepala Sekolah</h3>
                         <p class="kepsek-card__role">Kepala SD Inpres 168 Romangtanngaya</p>
-                        <p class="kepsek-card__quote">"Pendidikan adalah senjata paling mampuh yang bisa kamu gunakan untuk mengubah dunia."</p>
+                        <p class="kepsek-card__quote">"Pendidikan adalah senjata paling mampuh yang bisa kamu gunakan
+                            untuk mengubah dunia."</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +199,8 @@
                     <img src="/assets/logo-sd.png" alt="Logo" class="footer__logo">
                     <div>
                         <h3 class="footer__title">SD Inpres 168 Romangtanngaya</h3>
-                        <p class="footer__address">Kel. Mattompodalle, Kec. Polongbangkeng Utara<br>Kabupaten Takalar, Sulawesi Selatan</p>
+                        <p class="footer__address">Kel. Mattompodalle, Kec. Polongbangkeng Utara<br>Kabupaten Takalar,
+                            Sulawesi Selatan</p>
                     </div>
                 </div>
                 <div class="footer__links">
@@ -188,4 +228,5 @@
 
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 </body>
+
 </html>

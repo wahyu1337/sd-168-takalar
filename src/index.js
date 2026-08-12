@@ -6,6 +6,17 @@
 
 import './styles/index.css';
 
+// === Preloader ===
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('preloader--hidden');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // === DOM Elements ===
     const hamburgerBtn = document.getElementById('hamburger-btn');
