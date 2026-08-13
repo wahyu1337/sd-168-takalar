@@ -1181,240 +1181,6 @@ body.no-scroll {
 
 
 /* ============================================
-   RESPONSIVE — Tablet (< 1000px)
-   ============================================ */
-@media (max-width: 1000px) {
-    :root {
-        --fs-4xl: 2.5rem;
-        --fs-3xl: 2rem;
-    }
-
-    .stats__inner {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .profil__content {
-        grid-template-columns: 1fr;
-    }
-
-    .staff__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .informasi__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .galeri__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .kontak__content {
-        grid-template-columns: 1fr;
-    }
-
-    .footer__top {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer__brand {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Hamburger in Header */
-    .header__inner {
-        justify-content: flex-start;
-        gap: var(--space-md);
-    }
-
-    .navbar__hamburger {
-        display: flex;
-    }
-    
-    .navbar__hamburger-line {
-        background-color: var(--clr-white); /* Hamburger is now in the red header */
-    }
-
-    /* Hide the navbar bar entirely since menu is hidden and hamburger moved */
-    .navbar {
-        display: none;
-    }
-}
-
-
-/* ============================================
-   RESPONSIVE — Mobile (< 768px)
-   ============================================ */
-@media (max-width: 768px) {
-    :root {
-        --header-height: 70px;
-        --fs-4xl: 2rem;
-        --fs-3xl: 1.75rem;
-        --fs-2xl: 1.5rem;
-    }
-
-    /* Header compact */
-    .header {
-        padding: var(--space-md) var(--space-lg);
-    }
-
-    .header__logo {
-        width: 50px;
-        height: 50px;
-    }
-
-    .header__title {
-        font-size: var(--fs-md);
-    }
-
-    .header__subtitle {
-        font-size: var(--fs-xs);
-    }
-
-
-    /* Hero */
-    .hero {
-        min-height: 400px;
-    }
-
-    .hero__content {
-        padding: var(--space-3xl) var(--space-lg);
-    }
-
-    .hero__title {
-        font-size: var(--fs-2xl);
-    }
-
-    .hero__description {
-        font-size: var(--fs-sm);
-    }
-
-    .hero__buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-    }
-
-    /* Stats */
-    .stats__inner {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-
-    .stats__number {
-        font-size: var(--fs-2xl);
-    }
-
-    /* Sections */
-    .section {
-        padding: var(--space-3xl) var(--space-lg);
-    }
-
-    .section__title {
-        font-size: var(--fs-xl);
-    }
-
-    /* Staff */
-    .staff__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-
-    .staff__card {
-        padding: var(--space-lg) var(--space-md);
-    }
-
-    /* Informasi */
-    .informasi__grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Galeri */
-    .galeri__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-
-    /* Kontak */
-    .kontak__content {
-        grid-template-columns: 1fr;
-    }
-
-    /* Footer */
-    .footer__top {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-        text-align: center;
-    }
-
-    .footer__brand {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-}
-
-
-/* ============================================
-   RESPONSIVE — Small Mobile (< 480px)
-   ============================================ */
-@media (max-width: 480px) {
-    :root {
-        --fs-4xl: 1.75rem;
-        --fs-3xl: 1.5rem;
-    }
-
-    .header__logo-area {
-        gap: var(--space-md);
-    }
-
-    .header__logo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .header__title {
-        font-size: var(--fs-base);
-    }
-
-    .stats__inner {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-sm);
-    }
-
-    .stats__item {
-        padding: var(--space-md);
-    }
-
-    .stats__number {
-        font-size: var(--fs-xl);
-    }
-
-    .staff__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .galeri__grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* ============================================
    PAGE BANNER (Sub-pages)
    ============================================ */
 .page-banner {
@@ -1908,37 +1674,87 @@ body.no-scroll {
     min-height: 120px;
 }
 
-
 /* ============================================
-   RESPONSIVE — Page-specific (Tablet)
+   RESPONSIVE DESIGN (Media Queries)
    ============================================ */
-@media (max-width: 992px) {
+
+/* 1. Ultra Wide Desktop (< 1980px) */
+@media (max-width: 1980px) {
+    /* For screens smaller than 1980px, layout is primarily constrained by --max-width (1200px) */
+    /* Ensuring safe padding on extreme edges */
+    .section__inner, .header__inner, .navbar__inner, .stats__inner, .footer__inner {
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+    }
+}
+
+/* 2. Desktop / Laptop (< 1200px) */
+@media (max-width: 1200px) {
+    .stats__inner {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+    
+    .profil__content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    .staff__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+    
+    .informasi__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .galeri__grid, .galeri__grid--full {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__top {
+        gap: var(--space-md);
+    }
+}
+
+/* 3. Tablet (< 900px) */
+@media (max-width: 900px) {
+    :root {
+        --fs-4xl: 2.5rem;
+        --fs-3xl: 2rem;
+    }
+
+    /* Grid Adjustments */
+    .stats__inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profil__content,
+    .profil-detail,
+    .sejarah-content,
+    .identitas-grid,
+    .kontak__content,
     .preview-content {
         grid-template-columns: 1fr;
     }
 
-    .galeri__grid--preview {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .profil-detail {
-        grid-template-columns: 1fr;
-    }
-
-    .sejarah-content {
-        grid-template-columns: 1fr;
-    }
-
-    .identitas-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .staff__grid,
+    .galeri__grid,
+    .galeri__grid--preview,
+    .galeri__grid--full,
     .informasi-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .galeri__grid--full {
-        grid-template-columns: repeat(2, 1fr);
+    .footer__top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__brand {
+        flex-direction: column;
+        align-items: center;
     }
 
     .kepsek-card {
@@ -1952,31 +1768,112 @@ body.no-scroll {
         padding-left: 0;
         padding-top: var(--space-md);
     }
+
+    /* Hamburger in Header */
+    .header__inner {
+        justify-content: flex-start;
+        gap: var(--space-md);
+    }
+
+    .navbar__hamburger {
+        display: flex;
+    }
+    
+    .navbar__hamburger-line {
+        background-color: var(--clr-white);
+    }
+
+    .navbar {
+        display: none;
+    }
 }
 
-
-/* ============================================
-   RESPONSIVE — Page-specific (Mobile)
-   ============================================ */
+/* 4. Mobile Landscape / Small Tablet (< 768px) */
 @media (max-width: 768px) {
-    .page-banner {
-        min-height: 180px;
+    :root {
+        --header-height: 70px;
+        --fs-4xl: 2rem;
+        --fs-3xl: 1.75rem;
+        --fs-2xl: 1.5rem;
     }
 
-    .page-banner__title {
-        font-size: var(--fs-xl);
+    .header {
+        padding: var(--space-md) var(--space-lg);
     }
 
-    .page-banner__subtitle {
+    .header__logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header__title {
+        font-size: var(--fs-md);
+    }
+
+    .header__subtitle {
+        font-size: var(--fs-xs);
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero__content {
+        padding: var(--space-3xl) var(--space-lg);
+    }
+
+    .hero__title {
+        font-size: var(--fs-2xl);
+    }
+
+    .hero__description {
         font-size: var(--fs-sm);
     }
 
-    .galeri__grid--preview {
-        grid-template-columns: repeat(2, 1fr);
+    .hero__buttons {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .galeri__grid--full {
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .stats__inner {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .stats__number {
+        font-size: var(--fs-2xl);
+    }
+
+    .section {
+        padding: var(--space-3xl) var(--space-lg);
+    }
+
+    .section__title {
+        font-size: var(--fs-xl);
+    }
+
+    .staff__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .staff__card {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .informasi__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
     }
 
     .kepsek-card {
@@ -1989,13 +1886,64 @@ body.no-scroll {
         min-width: 90px;
         font-size: 40px;
     }
-}
 
-@media (max-width: 480px) {
-    .galeri__grid--preview {
-        grid-template-columns: 1fr;
+    .page-banner {
+        min-height: 180px;
     }
 
+    .page-banner__title {
+        font-size: var(--fs-xl);
+    }
+
+    .page-banner__subtitle {
+        font-size: var(--fs-sm);
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* 5. Mobile Portrait (< 480px) */
+@media (max-width: 480px) {
+    :root {
+        --fs-4xl: 1.75rem;
+        --fs-3xl: 1.5rem;
+    }
+
+    .header__logo-area {
+        gap: var(--space-md);
+    }
+
+    .header__logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__title {
+        font-size: var(--fs-base);
+    }
+
+    .stats__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .stats__item {
+        padding: var(--space-md);
+    }
+
+    .stats__number {
+        font-size: var(--fs-xl);
+    }
+
+    .staff__grid,
+    .galeri__grid,
+    .galeri__grid--preview,
     .galeri__grid--full {
         grid-template-columns: 1fr;
     }
