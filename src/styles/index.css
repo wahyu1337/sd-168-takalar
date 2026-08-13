@@ -313,6 +313,17 @@ body.no-scroll {
     gap: 5px;
     padding: var(--space-md);
     z-index: 101;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+    border-radius: var(--radius-sm);
+}
+
+.navbar__hamburger:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar__hamburger:active {
+    transform: scale(0.95);
 }
 
 .navbar__hamburger-line {
@@ -340,7 +351,7 @@ body.no-scroll {
    SIDEBAR (Mobile Only)
    ============================================ */
 .sidebar-overlay {
-    display: none;
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -350,11 +361,11 @@ body.no-scroll {
     backdrop-filter: blur(4px);
     z-index: 199;
     opacity: 0;
-    transition: opacity var(--transition-normal);
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
 }
 
 .sidebar-overlay.active {
-    display: block;
+    visibility: visible;
     opacity: 1;
 }
 
