@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profil SD Inpres 168 Romangtanngaya — Visi, Misi, Sejarah, dan Struktur Organisasi Sekolah.">
+    <meta name="description"
+        content="Profil SD Inpres 168 Romangtanngaya — Visi, Misi, Sejarah, dan Struktur Organisasi Sekolah.">
     <title>Profil — SD Inpres 168 Romangtanngaya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         .preloader {
             position: fixed;
@@ -22,10 +25,12 @@
             justify-content: center;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
+
         .preloader--hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .preloader__spinner {
             width: 50px;
             height: 50px;
@@ -34,11 +39,15 @@
             border-radius: 50%;
             animation: preloader-spin 1s linear infinite;
         }
+
         @keyframes preloader-spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- PRELOADER -->
     <div id="preloader" class="preloader">
@@ -57,7 +66,8 @@
                 <img src="/assets/logo-sd.png" alt="Logo SD Inpres 168" class="header__logo">
                 <div class="header__text">
                     <h1 class="header__title">SD Inpres 168 Romangtanngaya</h1>
-                    <p class="header__subtitle">Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng Utara</p>
+                    <p class="header__subtitle">Kelurahan Mattompodalle, Kabupaten Takalar, Kecamatan Polongbangkeng
+                        Utara</p>
                 </div>
             </div>
         </div>
@@ -69,6 +79,7 @@
             <ul class="navbar__menu" id="nav-menu">
                 <li><a href="/" class="navbar__link" data-page="home">Home</a></li>
                 <li><a href="/profil/" class="navbar__link" data-page="profil">Profil</a></li>
+                <li><a href="/visi/" class="navbar__link" data-page="visi">Visi &amp; Misi</a></li>
                 <li><a href="/staff/" class="navbar__link" data-page="staff">Staff &amp; Guru</a></li>
                 <li><a href="/galeri/" class="navbar__link" data-page="galeri">Galeri</a></li>
                 <li><a href="/kontak/" class="navbar__link" data-page="kontak">Kontak</a></li>
@@ -86,6 +97,7 @@
         <ul class="sidebar__menu">
             <li><a href="/" class="sidebar__link" data-page="home">🏠 Home</a></li>
             <li><a href="/profil/" class="sidebar__link" data-page="profil">📋 Profil</a></li>
+            <li><a href="/visi/" class="sidebar__link" data-page="visi">🎯 Visi &amp; Misi</a></li>
             <li><a href="/staff/" class="sidebar__link" data-page="staff">👨‍🏫 Staff &amp; Guru</a></li>
             <li><a href="/galeri/" class="sidebar__link" data-page="galeri">🖼️ Galeri</a></li>
             <li><a href="/kontak/" class="sidebar__link" data-page="kontak">📞 Kontak</a></li>
@@ -105,32 +117,26 @@
             </div>
         </section>
 
-        <!-- Visi & Misi -->
-        <section class="section" id="visi-misi">
+        <!-- Biodata Kepala Sekolah -->
+        <section class="section" id="biodata-kepsek">
             <div class="section__inner">
                 <div class="section__header animate-on-scroll">
-                    <span class="section__badge">Tujuan Kami</span>
-                    <h2 class="section__title">Visi &amp; Misi</h2>
+                    <span class="section__badge">Pimpinan Kami</span>
+                    <h2 class="section__title">Biodata Kepala Sekolah</h2>
                     <div class="section__divider"></div>
                 </div>
 
                 <div class="profil-detail animate-on-scroll">
-                    <div class="profil-detail__card profil-detail__card--visi">
-                        <div class="profil-detail__icon">🎯</div>
-                        <h3>Visi</h3>
-                        <p>Terwujudnya peserta didik yang berkarakter, cerdas, terampil, dan berakhlak mulia berdasarkan iman dan taqwa.</p>
-                    </div>
-
-                    <div class="profil-detail__card profil-detail__card--misi">
-                        <div class="profil-detail__icon">🚀</div>
-                        <h3>Misi</h3>
-                        <ul>
-                            <li>Melaksanakan pembelajaran yang aktif, kreatif, efektif, dan menyenangkan (PAKEM)</li>
-                            <li>Menumbuhkan semangat keunggulan secara intensif kepada seluruh warga sekolah</li>
-                            <li>Mendorong dan membantu setiap siswa untuk mengenali potensi dirinya</li>
-                            <li>Menerapkan manajemen partisipatif dengan melibatkan seluruh warga sekolah</li>
-                            <li>Meningkatkan kualitas tenaga pendidik dan kependidikan</li>
-                        </ul>
+                    <div class="profil-detail__card"
+                        style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <div class="profil-detail__icon" style="font-size: 80px; margin-bottom: 20px;">👤</div>
+                        <h3>[Nama Kepala Sekolah]</h3>
+                        <p style="margin-bottom: 15px;"><strong>NIP:</strong> [Isi NIP di sini]</p>
+                        <p style="max-width: 700px; margin: 0 auto; color: var(--clr-text-light); line-height: 1.8;">
+                            [Deskripsi singkat mengenai latar belakang, riwayat pendidikan, atau sambutan dari Kepala
+                            Sekolah dapat ditulis di sini nantinya. Bagian ini sengaja dikosongkan agar Anda dapat
+                            mengisinya nanti.]
+                        </p>
                     </div>
                 </div>
             </div>
@@ -153,9 +159,14 @@
                         </div>
                     </div>
                     <div class="sejarah-content__text">
-                        <p>SD Inpres 168 Romangtanngaya merupakan salah satu sekolah dasar negeri yang terletak di Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Provinsi Sulawesi Selatan.</p>
-                        <p>Sekolah ini didirikan sebagai bagian dari program Instruksi Presiden (Inpres) untuk pemerataan pendidikan di seluruh wilayah Indonesia. Sejak berdiri, sekolah ini telah mendidik banyak generasi muda di wilayah Romangtanngaya dan sekitarnya.</p>
-                        <p>Dengan komitmen terhadap pendidikan berkualitas, SD Inpres 168 terus berupaya meningkatkan fasilitas, kualitas pengajaran, dan prestasi siswa untuk mencapai visi sekolah.</p>
+                        <p>SD Inpres 168 Romangtanngaya merupakan salah satu sekolah dasar negeri yang terletak di
+                            Kelurahan Mattompodalle, Kecamatan Polongbangkeng Utara, Kabupaten Takalar, Provinsi
+                            Sulawesi Selatan.</p>
+                        <p>Sekolah ini didirikan sebagai bagian dari program Instruksi Presiden (Inpres) untuk
+                            pemerataan pendidikan di seluruh wilayah Indonesia. Sejak berdiri, sekolah ini telah
+                            mendidik banyak generasi muda di wilayah Romangtanngaya dan sekitarnya.</p>
+                        <p>Dengan komitmen terhadap pendidikan berkualitas, SD Inpres 168 terus berupaya meningkatkan
+                            fasilitas, kualitas pengajaran, dan prestasi siswa untuk mencapai visi sekolah.</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +228,8 @@
                     <img src="/assets/logo-sd.png" alt="Logo" class="footer__logo">
                     <div>
                         <h3 class="footer__title">SD Inpres 168 Romangtanngaya</h3>
-                        <p class="footer__address">Kel. Mattompodalle, Kec. Polongbangkeng Utara<br>Kabupaten Takalar, Sulawesi Selatan</p>
+                        <p class="footer__address">Kel. Mattompodalle, Kec. Polongbangkeng Utara<br>Kabupaten Takalar,
+                            Sulawesi Selatan</p>
                     </div>
                 </div>
                 <div class="footer__links">
@@ -225,6 +237,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/profil/">Profil</a></li>
+                        <li><a href="/visi/">Visi &amp; Misi</a></li>
                         <li><a href="/staff/">Staff & Guru</a></li>
                         <li><a href="/galeri/">Galeri</a></li>
                         <li><a href="/kontak/">Kontak</a></li>
@@ -245,4 +258,5 @@
 
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 </body>
+
 </html>
