@@ -37,6 +37,11 @@ module.exports = {
             template: './src/profil/index.html',
             filename: 'profil/index.html',
         }),
+        // Visi
+        new HtmlWebpackPlugin({
+            template: './src/visi/index.html',
+            filename: 'visi/index.html',
+        }),
         // Staff & Guru
         new HtmlWebpackPlugin({
             template: './src/staff/index.html',

@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Determine current page from URL
         let currentPage = 'home';
         if (path.includes('/profil')) currentPage = 'profil';
+        else if (path.includes('/visi')) currentPage = 'visi';
         else if (path.includes('/staff')) currentPage = 'staff';
         else if (path.includes('/informasi')) currentPage = 'informasi';
         else if (path.includes('/galeri')) currentPage = 'galeri';
