@@ -1999,8 +1999,8 @@ body.no-scroll {
     }
 }
 
-/* 6. Extra Small Mobile (< 420px) */
-@media (max-width: 420px) {
+/* 6. Extra Small Mobile (< 480px) */
+@media (max-width: 480px) {
     .header {
         padding: var(--space-sm) var(--space-md);
     }
@@ -2028,5 +2028,27 @@ body.no-scroll {
     
     .navbar__hamburger {
         padding: var(--space-sm);
+    }
+
+    .kontak__content {
+        gap: var(--space-md);
+    }
+
+    .kontak__item {
+        padding: var(--space-sm);
+    }
+    
+    .kontak__item p, .kontak__item h4 {
+        font-size: var(--fs-xs);
+    }
+
+    .kontak__icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .kontak__map-placeholder {
+        min-height: 200px;
     }
 }
