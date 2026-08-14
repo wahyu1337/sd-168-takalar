@@ -1724,6 +1724,10 @@ body.no-scroll {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .kontak__content {
+        gap: var(--space-xl);
+    }
+
     .footer__top {
         gap: var(--space-md);
     }
@@ -1745,9 +1749,13 @@ body.no-scroll {
     .profil-detail,
     .sejarah-content,
     .identitas-grid,
-    .kontak__content,
     .preview-content {
         grid-template-columns: 1fr;
+    }
+
+    .kontak__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
 
     .staff__grid,
@@ -1882,6 +1890,21 @@ body.no-scroll {
         grid-template-columns: 1fr;
     }
 
+    .kontak__item {
+        padding: var(--space-md);
+        gap: var(--space-md);
+    }
+
+    .kontak__icon {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+
+    .kontak__map-placeholder {
+        min-height: 250px;
+    }
+
     .galeri__grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
@@ -1957,6 +1980,13 @@ body.no-scroll {
     .galeri__grid--preview,
     .galeri__grid--full {
         grid-template-columns: 1fr;
+    }
+
+    .kontak__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-sm);
     }
 
     .galeri-filter {
