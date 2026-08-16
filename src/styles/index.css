@@ -359,9 +359,10 @@ body.no-scroll {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 199;
     opacity: 0;
-    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .sidebar-overlay.active {
@@ -372,18 +373,20 @@ body.no-scroll {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: 0;
     width: var(--sidebar-width);
     height: 100vh;
     background: var(--clr-white);
     z-index: 200;
-    transition: left var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-105%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shadow-xl);
     overflow-y: auto;
+    will-change: transform;
 }
 
 .sidebar.active {
-    left: 0;
+    transform: translateX(0);
 }
 
 .sidebar__header {
@@ -431,6 +434,31 @@ body.no-scroll {
     color: var(--clr-gray-700);
     border-left: 4px solid transparent;
     transition: all var(--transition-fast);
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+/* Staggered entrance animation for sidebar links */
+.sidebar.active .sidebar__link {
+    animation: sidebarLinkSlideIn 0.35s ease forwards;
+}
+
+.sidebar.active .sidebar__menu li:nth-child(1) .sidebar__link { animation-delay: 0.08s; }
+.sidebar.active .sidebar__menu li:nth-child(2) .sidebar__link { animation-delay: 0.13s; }
+.sidebar.active .sidebar__menu li:nth-child(3) .sidebar__link { animation-delay: 0.18s; }
+.sidebar.active .sidebar__menu li:nth-child(4) .sidebar__link { animation-delay: 0.23s; }
+.sidebar.active .sidebar__menu li:nth-child(5) .sidebar__link { animation-delay: 0.28s; }
+.sidebar.active .sidebar__menu li:nth-child(6) .sidebar__link { animation-delay: 0.33s; }
+
+@keyframes sidebarLinkSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .sidebar__link:hover,
