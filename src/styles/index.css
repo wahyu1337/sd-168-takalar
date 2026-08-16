@@ -1791,11 +1791,12 @@ body.no-scroll {
     /* Hamburger in Header */
     .header__inner {
         justify-content: flex-start;
-        gap: var(--space-md);
+        gap: var(--space-sm);
     }
 
     .navbar__hamburger {
         display: flex;
+        margin-left: -12px;
     }
     
     .navbar__hamburger-line {
@@ -1817,7 +1818,7 @@ body.no-scroll {
     }
 
     .header {
-        padding: var(--space-md) var(--space-lg);
+        padding: var(--space-md) var(--space-md);
     }
 
     .header__logo {
